@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Evolution – Milestone 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Nav -->
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <nav class="menu" aria-label="Main">
+    <a id="brand" href="index.html">Web Evolution</a>
+    <div class="links">
+      <a href="http-history.html">History</a>
+      <a href="http-versions.html">HTTP Versions</a>
+      <a href="key-concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+      <a href="quiz.html">Quiz</a>
+    </div>
+  </nav>
+
+  <!-- Hero with JPG background (styles.css: .hero--home) -->
+  <header class="hero hero--home">
+    <img src="assets/hero.svg" alt="Hero illustration for Web Evolution project" role="presentation" />
+    <div class="overlay">
+      <h1>Project Milestone #1: HTTP & The Evolution of the Web</h1>
+      <p class="tagline">From simple hypertext to HTTP/3 and beyond</p>
+      <p class="toc-title" aria-hidden="true" style="margin-top:.5rem; opacity:.9;">Table of Contents</p>
+    </div>
+  </header>
+
+  <!-- Main content area -->
+  <main id="main" class="wrapper">
+    <section class="card-grid" aria-label="Site sections">
+      <article class="card">
+        <img src="assets/history.svg" alt="History section illustration" role="presentation" />
+        <h2><a href="http-history.html">Origins & History</a></h2>
+        <p>From CERN and HTTP/0.9 to the commercialization of the web.</p>
+      </article>
+
+      <article class="card">
+        <img src="assets/versions.svg" alt="HTTP versions illustration" role="presentation" />
+        <h2><a href="http-versions.html">HTTP Versions</a></h2>
+        <p>Comparing HTTP/1.0, 1.1, 2, and 3 – features, performance, and impact.</p>
+      </article>
+
+      <article class="card">
+        <img src="assets/concepts.svg" alt="Key concepts illustration" role="presentation" />
+        <h2><a href="key-concepts.html">Key Concepts</a></h2>
+        <p>7 essential ideas: URLs, methods, status codes, headers, caching, TLS, QUIC.</p>
+      </article>
+
+      <article class="card">
+        <img src="assets/refs.svg" alt="References section illustration" role="presentation" />
+        <h2><a href="references.html">References & Resources</a></h2>
+        <p>Curated links and citations used across this project.</p>
+      </article>
+
+      <article class="card">
+        <img src="assets/about.svg" alt="About section illustration" role="presentation" />
+        <h2><a href="about.html">About</a></h2>
+        <p>Who I am and what this project covers.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+<footer class="site-footer">
+  <p><strong>LinkedIn:</strong>
+    <a href="https://www.linkedin.com/in/ceejay-raut" target="_blank" rel="noopener">
+      linkedin.com/in/ceejay-raut
+    </a>
+  </p>
+  <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">IT 3203 – Web Development</a> at Kennesaw State University.</p>
+  <p>© 2025 Ceejay Raut. Built with semantic HTML + CSS Grid/Flex.</p>
+</footer>

@@ -1,0 +1,181 @@
+<!doctype html>
+<!--
+  Project: Milestone 1 – Web Evolution
+  File: http-history.html (expanded)
+  Purpose: Clear, sourced overview of HTTP’s origin and growth with a milestone timeline
+  Notes: Uses classes already in styles.css (wrapper, banner, note, compare, etc.)
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Origins & History of HTTP – Web Evolution</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Skip link improves keyboard accessibility -->
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <!-- Top nav -->
+  <nav class="menu" aria-label="Main">
+    <a id="brand" href="index.html">Web Evolution</a>
+    <div class="links">
+      <a href="http-history.html" aria-current="page">History</a>
+      <a href="http-versions.html">HTTP Versions</a>
+      <a href="key-concepts.html">Key Concepts</a>
+      <a href="references.html">References</a>
+      <a href="about.html">About</a>
+      <a href="quiz.html">Quiz</a>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main id="main" class="wrapper narrow">
+    <h1>Origins & History of HTTP</h1>
+    <p class="intro">
+      HTTP began at CERN as a simple way to fetch hypertext documents and grew into
+      the secure, high-performance protocol that powers today’s web apps, APIs, and media.
+    </p>
+
+    <figure class="banner">
+      <img src="assets/history.svg" alt="" role="presentation" />
+    </figure>
+
+    <!-- Early days -->
+    <section aria-labelledby="early">
+      <h2 id="early">CERN & the First Web (1990–1993)</h2>
+      <p>
+        Tim Berners-Lee combined the </strong>URL</strong> in identifying the resource, 
+        HTML in describing its contents, and <strong>HTTP</strong> in transmitting the document. 
+        People later called <strong>HTTP/0.9</strong> the first <strong>HTTP</strong> version. 
+        It defined only the GET request and an unadorned <strong>HTML</strong> response. 
+        The small scale of the design showed that a commonly accepted model of a browser requesting a resource from a server could be exported from the research lab.
+
+      </p>
+      <div class="note">
+        First tools: the <em>Line-Mode Browser</em>, NeXT’s <em>WorldWideWeb</em> editor,
+        and the reference <em>httpd</em> server—enough to spark a network of public pages.
+      </div>
+    </section>
+
+    <!-- Standardization -->
+    <section aria-labelledby="std">
+      <h2 id="std">From Prototype to Standard (1994–1999)</h2>
+      <p>
+        The protocol needed metadata and error handling because images, downloads, and forms became more common. 
+        <strong>HTTP/1.0 (1996)</strong> made headers, media types, and status codes like <code>404</code> standard. 
+        This worked but it created many short TCP connections for each page request, and this lowered performance.
+
+      </p>
+      <p>
+        The next major version of <strong>HTTP/1.1 (1997)</strong> added support for persistent connections inside it. 
+        It also kept connections alive, transferred encoding in chunks, improved caching, and negotiated content. 
+        These features contributed greatly to the dot-com boom and existed for 20 years.
+      </p>
+    </section>
+
+    <!-- Modernization -->
+    <section aria-labelledby="modern">
+      <h2 id="modern">Modernization & Scale (2010s–Today)</h2>
+      <p>
+        The mobile web and asset-heavy sites revealed that TCP limits head-of-line blocking and limits connections around it. 
+        <strong>HTTP/2 (2015)</strong> began multiplexing many concurrent requests across a single connection to reduce these limits, 
+        and it compressed headers for space savings.
+
+      </p>
+      <p>
+        <strong>HTTP/3</strong> replaced the transport layer protocol TCP using QUIC on top of UDP to provide 0-RTT connection
+        establishment latency and better packet loss recovery.
+        <strong>HTTPS</strong> is now the default throughout most of the web. It is the default because of security and speed benefits.
+      </p>
+      <aside class="note">
+        Why it matters: modern UX depends on low latency, resilience on mobile networks, and strong privacy by default.
+      </aside>
+    </section>
+
+    <!-- Timeline table -->
+    <section aria-labelledby="timeline">
+      <h2 id="timeline">Quick Timeline</h2>
+      <table class="compare" aria-describedby="timeline">
+        <caption>Key Milestones in HTTP</caption>
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Milestone</th>
+            <th>Why it Mattered</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1990–1991</td>
+            <td>HTTP/0.9 prototype at CERN</td>
+            <td>Proved the browser–server pattern; one method (<code>GET</code>) returning HTML.</td>
+          </tr>
+          <tr>
+            <td>1993–1994</td>
+            <td>NCSA Mosaic & early servers</td>
+            <td>Popularized inline images and made the web accessible to non-specialists.</td>
+          </tr>
+          <tr>
+            <td>1996</td>
+            <td>HTTP/1.0 (first spec)</td>
+            <td>Headers, MIME types, and status codes → richer content and basic error handling.</td>
+          </tr>
+          <tr>
+            <td>1997</td>
+            <td>HTTP/1.1</td>
+            <td>Persistent connections, chunked transfer, improved caching → the workhorse of the web.</td>
+          </tr>
+          <tr>
+            <td>2015</td>
+            <td>HTTP/2</td>
+            <td>Multiplexing and header compression cut latency for asset-heavy pages.</td>
+          </tr>
+          <tr>
+            <td>2022</td>
+            <td>HTTP/3 (QUIC)</td>
+            <td>Built-in encryption, faster handshakes, and better loss recovery for mobile networks.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Early browsers/servers -->
+    <section aria-labelledby="tools">
+      <h2 id="tools">Early Browsers & Servers</h2>
+      <ul>
+        <li><strong>WorldWideWeb (Nexus)</strong> – first browser/editor (NeXT, 1990).</li>
+        <li><strong>Line-Mode Browser</strong> – cross-platform text browser (1991).</li>
+        <li><strong>NCSA Mosaic</strong> – popular GUI browser; influenced Netscape/IE (1993).</li>
+        <li><strong>httpd / NCSA HTTPd / Apache</strong> – early servers; Apache dominated open-source hosting.</li>
+      </ul>
+    </section>
+
+    <!-- Looking forward -->
+    <section aria-labelledby="future">
+      <h2 id="future">What the History Teaches</h2>
+      <ol>
+        <li><strong>Simple starts scale.</strong> A minimal protocol can evolve without breaking the web.</li>
+        <li><strong>Performance drives adoption.</strong> Keep-alive (1.1), multiplexing (2), and QUIC (3) all reduced latency.</li>
+        <li><strong>Security becomes the default.</strong> HTTPS everywhere enables modern platform features and user trust.</li>
+      </ol>
+      <p class="note">
+        For feature-by-feature details, see the <a href="http-versions.html">HTTP Versions</a> page and the full essay embed on that page.
+      </p>
+    </section>
+  </main>
+
+  <!-- Shared footer -->
+<footer class="site-footer">
+  <p><strong>LinkedIn:</strong>
+    <a href="https://www.linkedin.com/in/ceejay-raut" target="_blank" rel="noopener">
+      linkedin.com/in/ceejay-raut
+    </a>
+  </p>
+  <p>This is a class project for <a href="https://ksuweb.github.io/IT3203/" target="_blank" rel="noopener">IT 3203 – Web Development</a> at Kennesaw State University.</p>
+  <p>© 2025 Ceejay Raut. Built with semantic HTML + CSS Grid/Flex.</p>
+</footer>
