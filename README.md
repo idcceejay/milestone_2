@@ -16,4 +16,4 @@ A small website explaining the evolution of HTTP (0.9 → 3) with a simple quiz.
 - `about.html` — About + embedded resume
 - `quiz.html` — 5-question quiz (Milestone 2)
 
-## Files/Structure
+
